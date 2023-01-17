@@ -64,20 +64,20 @@ public class UserMngmntController {
 		return usrMgnt.validateOTP(email, otp);
 	}
 	
-	@PostMapping("/getallcountries")
+	@GetMapping("/getallcountries")
 	public Map<Integer,String> getAllCountries() {
 		// TODO Auto-generated method stub
 		return usrMgnt.getAllCountries();
 	}
 
 	
-	@PostMapping("/getstates")
+	@GetMapping("/getstates")
 	public Map<Integer,String> getStates(@RequestParam Integer country) {
 		// TODO Auto-generated method stub
 		return usrMgnt.getStatesByCountry(country);
 	}
 
-	@PostMapping("/getcities")
+	@GetMapping("/getcities")
 	public Map<Integer,String> getCities(@RequestParam Integer state) {
 		// TODO Auto-generated method stub
 		return usrMgnt.getCitiesByState(state);
